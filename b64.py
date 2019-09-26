@@ -35,17 +35,23 @@ def main():
 
 def decode_function():
     #----Base64 Decode----#
-    encoded_string = input('Encoded String : ')
-    decoded_string = base64.b64decode(encoded_string.encode('ascii'))
-    print (decoded_string.decode('ascii'))
-    print()
+    try:
+        encoded_string = input('Encoded String : ')
+        decoded_string = base64.b64decode(encoded_string.encode('ascii'))
+        print (decoded_string.decode('ascii'))
+        print()
+    except:
+        print('Invalid Input')
 
 def encode_function():
     #----Base64 Encode----#
-    decoded_string = input('Decoded String : ')
-    encoded_string = base64.b64encode(decoded_string.encode('ascii'))
-    print (encoded_string.decode('ascii'))
-    print()
+    try:
+        decoded_string = input('Decoded String : ')
+        encoded_string = base64.b64encode(decoded_string.encode('ascii'))
+        print (encoded_string.decode('ascii'))
+        print()
+    except:
+        print('Invalid Input')
 
 main()
 
